@@ -1,0 +1,32 @@
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ni.edu.uam.fact_app.controller.MenuPrincipalController"
+            prefWidth="900" prefHeight="600">
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Catálogos">
+                    <items>
+                        <MenuItem text="Productos" onAction="#abrirProductos"/>
+                        <MenuItem text="Cargos" onAction="#abrirCargos"/>
+                        <MenuItem text="Categorías" onAction="#abrirCategorias"/>
+                        <MenuItem text="Empleados" onAction="#abrirEmpleados"/>
+                    </items>
+                </Menu>
+                <Menu text="Ayuda">
+                    <items>
+                        <MenuItem text="Acerca de" onAction="#abrirAcercaDe"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <StackPane fx:id="panelContenido" BorderPane.alignment="CENTER"/>
+    </center>
+</BorderPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.fact_app.controller.CategoriaController">
+
+    <top>        <GridPane hgap="10" vgap="10" BorderPane.alignment="CENTER">
+        <padding>                <Insets bottom="15" left="15" right="15" top="15" />
+        </padding>            <Label prefHeight="18.0" prefWidth="69.0" text="        ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="txtIdCategoria" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label prefHeight="18.0" prefWidth="74.0" text="   Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="txtNombreCategoria" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Descripción:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+            <font>
+               <Font size="12.0" />
+            </font></Label>
+        <TextArea fx:id="txtDescripcion" prefRowCount="3" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <HBox spacing="10" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+            <Button fx:id="btnGuardar" onAction="#onGuardar" text="Guardar" />
+            <Button fx:id="btnModificar" onAction="#onModificar" text="Modificar" />
+            <Button fx:id="btnEliminar" onAction="#onEliminar" text="Eliminar" />
+            <Button fx:id="btnLimpiar" onAction="#onLimpiar" text="Limpiar" />
+        </HBox>         <columnConstraints>            <ColumnConstraints />            <ColumnConstraints />         </columnConstraints>         <rowConstraints>            <RowConstraints />            <RowConstraints />            <RowConstraints />            <RowConstraints />         </rowConstraints>        </GridPane>    </top>    <center>        <TableView fx:id="tblCategorias" BorderPane.alignment="CENTER">
+    <columns>                <TableColumn fx:id="colIdCategoria" prefWidth="80" text="ID" />
+        <TableColumn fx:id="colNombreCategoria" prefWidth="200" text="Nombre" />
+        <TableColumn fx:id="colDescripcion" prefWidth="280" text="Descripción" />
+    </columns>            <BorderPane.margin>                <Insets bottom="15" left="15" right="15" top="10" />
+</BorderPane.margin>        </TableView>    </center></BorderPane>

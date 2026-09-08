@@ -1,5 +1,4 @@
 package ni.edu.uam.fact_app.model;
-import jdk.jfr.DataAmount;
 import lombok.*;
 
 @Data
